@@ -14,7 +14,7 @@ export const theme = {
   },
   space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
   fonts: {
-    body: 'system-ui, sans-serif',
+    body: 'Monaco, sans-serif',
     heading: 'Helvetica Neue, sans-serif',
     monospace: 'Menlo, monospace',
   },
@@ -37,10 +37,12 @@ export const theme = {
   borders: {
     none: 'none',
     normal: '1px solid',
+    middle: '3px solid',
   },
   radii: {
     none: '0',
     normal: '4px',
+    normalM: '16px',
     round: '50%',
   },
   shadows: {

@@ -13,6 +13,15 @@ const Statistics = ({good, neutral, bad, total, positivePercentage}) => {
   )
 }
 
-Statistics.propTypes = {}
+Statistics.propTypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
+  positivePercentage: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+  ]),
+}
 
 export default Statistics
