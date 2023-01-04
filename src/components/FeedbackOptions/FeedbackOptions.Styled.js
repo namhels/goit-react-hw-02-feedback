@@ -9,7 +9,7 @@ const Button = styled.button`
   color: ${p => p.theme.colors.accent};
   background-color: ${p => p.theme.colors.white};
   border: ${p => p.theme.borders.normal}${p => p.theme.colors.accent};
-  border-radius: ${p => p.theme.radii.normalM};
+  border-radius: ${p => p.theme.radii.middle};
   box-shadow: ${p => p.theme.shadows.small};
   cursor: pointer;
   transition: all 500ms;

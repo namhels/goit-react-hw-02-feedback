@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import Section from "components/Section";
 import FeedbackOptions from "components/FeedbackOptions";
 import Statistics from "components/Statistics";
@@ -10,19 +10,19 @@ class App extends Component {
   state = {
     good: 0,
     neutral: 0,
-    bad: 0
-  }
+    bad: 0,
+  };
 
   handleLeaveFeedback = (e) => {
     const option = e.target.dataset.label;
     this.setState(prevState => ({
       [option]: prevState[option] + 1,
-    }))
-  }
+    }));
+  };
 
   countTotalFeedback = () => {
     return Object.values(this.state).reduce((acc, el) => acc + el, 0);
-  }
+  };
 
   countPositiveFeedbackPercentage = () =>
     `${Math.round(
@@ -37,13 +37,13 @@ class App extends Component {
         p={5}
         bg="backgroundPrimary"
       >
-        <Section title="Please leave feedback">
+        <Section title="Please leave feedback💹">
           <FeedbackOptions
             options={Object.keys(this.state)}
             onLeaveFeedback = {handleLeaveFeedback}
           />
         </Section>
-        <Section title="Statistics">
+        <Section title="📊Statistics📈">
           {countTotalFeedback()
             ? <Statistics
               good={good}
@@ -56,9 +56,9 @@ class App extends Component {
         </Section>
       </Box>
     )
-  }
-}
+  };
+};
 
-export default App
+export default App;
 
 

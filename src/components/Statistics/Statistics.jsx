@@ -1,17 +1,18 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { StatisticsItem } from './Statistics.Styled';
 
 const Statistics = ({good, neutral, bad, total, positivePercentage}) => {
   return (
     <>
-      <p>Good: {good}</p>
-      <p>Neutral: {neutral}</p>
-      <p>Bad: {bad}</p>
-      <p>Total: {total}</p>
-      <p>Positive feedback: {positivePercentage}</p>
+      <StatisticsItem>Good: {good}</StatisticsItem>
+      <StatisticsItem>Neutral: {neutral}</StatisticsItem>
+      <StatisticsItem>Bad: {bad}</StatisticsItem>
+      <StatisticsItem>Total: {total}</StatisticsItem>
+      <StatisticsItem>Positive feedback: {positivePercentage}</StatisticsItem>
     </>
-  )
-}
+  );
+};
 
 Statistics.propTypes = {
   good: PropTypes.number.isRequired,
@@ -22,6 +23,6 @@ Statistics.propTypes = {
     PropTypes.string,
     PropTypes.number,
   ]),
-}
+};
 
-export default Statistics
+export default Statistics;
